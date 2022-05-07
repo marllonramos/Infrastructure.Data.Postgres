@@ -1,15 +1,21 @@
 ﻿using Infrastructure.Data.Postgres.Interface;
+using Microsoft.Extensions.Configuration;
 using Npgsql;
-using System.Configuration;
 using System.Data;
 
 namespace Infrastructure.Data.Postgres.Database
 {
     public class PostgresDatabase : IPostgresDatabase
     {
+        private readonly IConfiguration _configuration;
         private readonly string _connectionString;
 
-        public PostgresDatabase() => _connectionString = ConfigurationManager.AppSettings["ConnectionStringPostgres"];
+        //public PostgresDatabase() => _connectionString = ConfigurationManager.AppSettings["ConnectionStringPostgres"];
+        public PostgresDatabase(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            _connectionString = _configuration.GetConnectionString("ConnectionStringPostgres");
+        }
 
         public IDbConnection GetConnection() => new NpgsqlConnection(_connectionString);
         public IDbTransaction GetTransaction(IDbConnection connection, IsolationLevel isolationLevel) => connection.BeginTransaction(isolationLevel);
