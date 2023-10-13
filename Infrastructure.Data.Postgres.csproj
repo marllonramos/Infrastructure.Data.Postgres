@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj" />
+    <Reference Include="Infrastructure.Data">
+      <HintPath>..\Infrastructure.Data\bin\Debug\net7.0\Infrastructure.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
