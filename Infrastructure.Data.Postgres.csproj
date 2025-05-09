@@ -7,7 +7,7 @@
     <Company>RLS Desenvolvimento de Software</Company>
     <PackageId>TrackYou.Data.PostgreSQL</PackageId>
     <Description>Abstração para implementar os métodos necessários para conexão com bases de dados relacionais.</Description>
-    <RepositoryUrl>https://github.com/marllonramos/Infrastructure.Data</RepositoryUrl>
+    <RepositoryUrl>https://github.com/marllonramos/Infrastructure.Data.Postgres</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
