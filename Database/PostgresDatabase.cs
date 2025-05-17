@@ -161,6 +161,7 @@ namespace Infrastructure.Data.Postgres.Database
                 if (transaction != null) command.Transaction = (NpgsqlTransaction)transaction;
 
                 using var reader = await command.ExecuteReaderAsync();
+                resultTable = new DataTable();
                 resultTable.Load(reader);   // aqui é síncrono, mas não tem muito o que fazer. Não existe implementação assíncrona da Microsoft, até a data de hoje(09/05/2025), para este caso.
             }
             catch
