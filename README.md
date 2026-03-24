@@ -1,9 +1,5 @@
-<p align="center" id="topo">
-  <img src="./assets/logo.jpg" alt="TrackYou Logo" width="400"/>
-</p>
-
 <h1 align="center">
-    TrackYou Data PostgreSQL
+    Infrastructure Data PostgreSQL
 </h1>
 
 <p align="center"><strong>Navegação do projeto</strong></p>
@@ -16,7 +12,7 @@
 
 ## Sobre
 
-    Essa é uma biblioteca que implementa a biblioteca TrackYou.Data e que serve para conectar com a base de dados do PostgreSQL.
+    Essa é uma biblioteca que implementa a biblioteca Infrastructure.Data e que serve para conectar com a base de dados do PostgreSQL.
 	Ela facilita a comunicação com o PostgreSQL, permitindo ao desenvolvedor focar na criação das consultas sem a necessidade de implementar a parte de conexão e tarefas relacionadas.
 
 ## Funcionalidades
